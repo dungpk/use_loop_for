@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[*Bài tập] Thực hành vòng lặp for</title>
+</head>
+<body>
+
+<p><b>Bài 1 :</b>In ra giá trị .</p>
+<p id="demo"></p>
+<p><b>Bài 2 :</b>Nhập vào giá trị lớn hơn 0.</p>
+<p id="bai2"></p>
+<hr>
+
+
+<script>
+    let text = "";
+    let i;
+    for (i = 0; i < 5; i++) {
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+
+    let num = prompt("Enter your number: ");
+    let text_2 = "";
+    if(isNaN(num) ||num<0){
+        document.getElementById("bai2").innerHTML = "giá trị nhập vào không đúng";
+    }else{
+        for(let i=1;i<=num;i++){
+           text_2 += "The number is " + i + "<br>";
+        }
+    }
+    document.getElementById("bai2").innerHTML = text_2;
+</script>
+
+</body>
+</html>
